@@ -1,40 +1,80 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.0.1 (Python 3.12.5 on win32)" generated="2024-08-31T02:15:29.540942" rpa="false" schemaversion="5">
+<robot generator="Robot 7.0.1 (Python 3.12.5 on win32)" generated="2024-08-31T14:28:48.874893" rpa="false" schemaversion="5">
 <suite id="s1" name="Tests" source="C:\Estudos\ProjetoRobot\tests">
 <suite id="s1-s1" name="Ticketbox" source="C:\Estudos\ProjetoRobot\tests\Ticketbox.robot">
 <test id="s1-s1-t1" name="Caso de testes 01: Prencher Formulario" line="8">
 <kw name="Abrir navegador" owner="resource" type="SETUP">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2024-08-31T02:15:29.779119" level="INFO">Opening browser 'chrome' to base url 'https://ticket-box.s3.eu-central-1.amazonaws.com/index.html'.</msg>
+<msg time="2024-08-31T14:28:49.125494" level="INFO">Opening browser 'chrome' to base url 'https://ticket-box.s3.eu-central-1.amazonaws.com/index.html'.</msg>
 <arg>${URL}</arg>
 <arg>${BROWSER}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2024-08-31T02:15:29.778073" elapsed="3.130475"/>
+<status status="PASS" start="2024-08-31T14:28:49.125494" elapsed="3.099824"/>
 </kw>
-<status status="PASS" start="2024-08-31T02:15:29.778073" elapsed="3.130475"/>
+<status status="PASS" start="2024-08-31T14:28:49.124493" elapsed="3.100825"/>
 </kw>
 <kw name="Dado que eu estou na pagina inicial do Formulário" owner="FormulárioTicketBoxSteps">
 <kw name="Title Should Be" owner="SeleniumLibrary">
-<msg time="2024-08-31T02:15:32.917578" level="INFO">Page title is 'Ticketbox'.</msg>
+<msg time="2024-08-31T14:28:52.238314" level="INFO">Page title is 'Ticketbox'.</msg>
 <arg>${ticketboxnome}</arg>
 <doc>Verifies that the current page title equals ``title``.</doc>
-<status status="PASS" start="2024-08-31T02:15:32.910544" elapsed="0.007034"/>
+<status status="PASS" start="2024-08-31T14:28:52.227314" elapsed="0.011000"/>
 </kw>
-<status status="PASS" start="2024-08-31T02:15:32.909542" elapsed="0.008036"/>
+<status status="PASS" start="2024-08-31T14:28:52.226314" elapsed="0.013001"/>
+</kw>
+<kw name=" E preencho o campo first name" owner="FormulárioTicketBoxSteps">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-08-31T14:28:52.240312" level="INFO">Typing text ''Leandro'' into text field 'xpath=//input[@id='first-name']'.</msg>
+<arg>${Campo_first_name}</arg>
+<arg>'Leandro'</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-31T14:28:52.240312" elapsed="0.139527"/>
+</kw>
+<status status="PASS" start="2024-08-31T14:28:52.240312" elapsed="0.139527"/>
+</kw>
+<kw name=" E preencho o campo last name" owner="FormulárioTicketBoxSteps">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-08-31T14:28:52.380838" level="INFO">Typing text ''Luiz Mazzuchello'' into text field 'xpath=//input[@id='last-name']'.</msg>
+<arg>${Campo_last_name}</arg>
+<arg>'Luiz Mazzuchello'</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-31T14:28:52.379839" elapsed="0.138024"/>
+</kw>
+<status status="PASS" start="2024-08-31T14:28:52.379839" elapsed="0.138024"/>
+</kw>
+<kw name="E preencho o email" owner="FormulárioTicketBoxSteps">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-08-31T14:28:52.518864" level="INFO">Typing text ''agc@gmail.com'' into text field 'xpath=//input[@id='email']'.</msg>
+<arg>${Campo_email}</arg>
+<arg>'agc@gmail.com'</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-31T14:28:52.518864" elapsed="0.130211"/>
+</kw>
+<status status="PASS" start="2024-08-31T14:28:52.518864" elapsed="0.130211"/>
+</kw>
+<kw name=" E seleciono a quantidade de tickets" owner="FormulárioTicketBoxSteps">
+<kw name="Select From List By Index" owner="SeleniumLibrary">
+<msg time="2024-08-31T14:28:52.650079" level="INFO">Selecting options from selection list 'xpath=//*[@id="ticket-quantity"]' by index 2.</msg>
+<arg>${Select_Qtd_ticket}</arg>
+<arg>2</arg>
+<doc>Selects options from selection list ``locator`` by ``indexes``.</doc>
+<status status="PASS" start="2024-08-31T14:28:52.650079" elapsed="0.116706"/>
+</kw>
+<status status="PASS" start="2024-08-31T14:28:52.650079" elapsed="0.116706"/>
 </kw>
 <kw name="Fechar navegador" owner="resource" type="TEARDOWN">
 <kw name="Close Browser" owner="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2024-08-31T02:15:32.918543" elapsed="2.178863"/>
+<status status="PASS" start="2024-08-31T14:28:52.767781" elapsed="2.155430"/>
 </kw>
-<status status="PASS" start="2024-08-31T02:15:32.918543" elapsed="2.178863"/>
+<status status="PASS" start="2024-08-31T14:28:52.767781" elapsed="2.156452"/>
 </kw>
 <tag>Formulario</tag>
-<status status="PASS" start="2024-08-31T02:15:29.777068" elapsed="5.321181"/>
+<status status="PASS" start="2024-08-31T14:28:49.123492" elapsed="5.801498"/>
 </test>
-<status status="PASS" start="2024-08-31T02:15:29.575387" elapsed="5.525762"/>
+<status status="PASS" start="2024-08-31T14:28:48.909939" elapsed="6.021101"/>
 </suite>
-<status status="PASS" start="2024-08-31T02:15:29.542929" elapsed="5.560220"/>
+<status status="PASS" start="2024-08-31T14:28:48.876921" elapsed="6.059092"/>
 </suite>
 <statistics>
 <total>
@@ -49,6 +89,6 @@
 </suite>
 </statistics>
 <errors>
-<msg time="2024-08-31T02:15:29.775478" level="WARN">Imported resource file 'C:\Estudos\ProjetoRobot\resources\steps\generic.robot' is empty.</msg>
+<msg time="2024-08-31T14:28:49.121142" level="WARN">Imported resource file 'C:\Estudos\ProjetoRobot\resources\steps\generic.robot' is empty.</msg>
 </errors>
 </robot>
