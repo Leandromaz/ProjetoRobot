@@ -15,3 +15,4 @@ Caso de testes 01: Prencher Formulario completo
     E selecione a opção Vip no tipo de ticket
     E seleciono a opção friend
     E preencho a requisição
+    E Validar frase de compra de ticket
